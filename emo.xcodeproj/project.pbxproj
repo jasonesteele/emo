@@ -14,8 +14,8 @@
 		962C610A2014F3C90028B931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962C61082014F3C90028B931 /* Main.storyboard */; };
 		962C610C2014F3C90028B931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962C610B2014F3C90028B931 /* Assets.xcassets */; };
 		962C610F2014F3C90028B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962C610D2014F3C90028B931 /* LaunchScreen.storyboard */; };
-		962C611A2014F3CA0028B931 /* emoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61192014F3CA0028B931 /* emoTests.swift */; };
-		962C61252014F3CA0028B931 /* emoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61242014F3CA0028B931 /* emoUITests.swift */; };
+		962C611A2014F3CA0028B931 /* EmoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61192014F3CA0028B931 /* EmoTests.swift */; };
+		962C61252014F3CA0028B931 /* EmoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61242014F3CA0028B931 /* EmoUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +46,10 @@
 		962C610E2014F3C90028B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		962C61102014F3C90028B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962C61152014F3CA0028B931 /* emoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		962C61192014F3CA0028B931 /* emoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emoTests.swift; sourceTree = "<group>"; };
+		962C61192014F3CA0028B931 /* EmoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoTests.swift; sourceTree = "<group>"; };
 		962C611B2014F3CA0028B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962C61202014F3CA0028B931 /* emoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		962C61242014F3CA0028B931 /* emoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emoUITests.swift; sourceTree = "<group>"; };
+		962C61242014F3CA0028B931 /* EmoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoUITests.swift; sourceTree = "<group>"; };
 		962C61262014F3CA0028B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEB3766DE4C4E31AB446C515 /* Pods_emo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F9C1BA6EB092847993CB8A /* Pods-emo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emo/Pods-emo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		962C61182014F3CA0028B931 /* emoTests */ = {
 			isa = PBXGroup;
 			children = (
-				962C61192014F3CA0028B931 /* emoTests.swift */,
+				962C61192014F3CA0028B931 /* EmoTests.swift */,
 				962C611B2014F3CA0028B931 /* Info.plist */,
 			);
 			path = emoTests;
@@ -146,7 +146,7 @@
 		962C61232014F3CA0028B931 /* emoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				962C61242014F3CA0028B931 /* emoUITests.swift */,
+				962C61242014F3CA0028B931 /* EmoUITests.swift */,
 				962C61262014F3CA0028B931 /* Info.plist */,
 			);
 			path = emoUITests;
@@ -165,6 +165,7 @@
 				962C60FD2014F3C90028B931 /* Resources */,
 				C0E9862E72672FBC222D31C6 /* [CP] Embed Pods Frameworks */,
 				76E8D12B1D668B4E3B3ABCA6 /* [CP] Copy Pods Resources */,
+				962C6132201529920028B931 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -300,6 +301,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emo/Pods-emo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		962C6132201529920028B931 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		C0E9862E72672FBC222D31C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,7 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962C611A2014F3CA0028B931 /* emoTests.swift in Sources */,
+				962C611A2014F3CA0028B931 /* EmoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962C61252014F3CA0028B931 /* emoUITests.swift in Sources */,
+				962C61252014F3CA0028B931 /* EmoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
