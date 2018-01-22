@@ -9,13 +9,20 @@
 /* Begin PBXBuildFile section */
 		2D517FBBAAA40F43C216ECA3 /* Pods_emo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB3766DE4C4E31AB446C515 /* Pods_emo.framework */; };
 		962C61032014F3C90028B931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61022014F3C90028B931 /* AppDelegate.swift */; };
-		962C61052014F3C90028B931 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61042014F3C90028B931 /* FirstViewController.swift */; };
-		962C61072014F3C90028B931 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61062014F3C90028B931 /* SecondViewController.swift */; };
+		962C61052014F3C90028B931 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61042014F3C90028B931 /* DebugViewController.swift */; };
 		962C610A2014F3C90028B931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962C61082014F3C90028B931 /* Main.storyboard */; };
 		962C610C2014F3C90028B931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962C610B2014F3C90028B931 /* Assets.xcassets */; };
 		962C610F2014F3C90028B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962C610D2014F3C90028B931 /* LaunchScreen.storyboard */; };
 		962C611A2014F3CA0028B931 /* EmoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61192014F3CA0028B931 /* EmoTests.swift */; };
 		962C61252014F3CA0028B931 /* EmoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61242014F3CA0028B931 /* EmoUITests.swift */; };
+		9665E7F420164F5500C2DEAC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665E7F320164F5500C2DEAC /* Character.swift */; };
+		9665E7F8201657AF00C2DEAC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665E7F7201657AF00C2DEAC /* APIRequest.swift */; };
+		9665E7FE20165A3C00C2DEAC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665E7FD20165A3C00C2DEAC /* APIError.swift */; };
+		9665E8022016613600C2DEAC /* CharacterResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665E8012016613600C2DEAC /* CharacterResource.swift */; };
+		9665E8052016624200C2DEAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665E8042016624200C2DEAC /* Result.swift */; };
+		9665E807201662C100C2DEAC /* EveAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665E806201662C100C2DEAC /* EveAPIClient.swift */; };
+		9665E80D20166EC300C2DEAC /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665E80C20166EC300C2DEAC /* ErrorResponse.swift */; };
+		9665E80F20166FD500C2DEAC /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665E80E20166FD500C2DEAC /* DataContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +46,7 @@
 		80827B748A6653FABD895F2A /* Pods-emo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emo.release.xcconfig"; path = "Pods/Target Support Files/Pods-emo/Pods-emo.release.xcconfig"; sourceTree = "<group>"; };
 		962C60FF2014F3C90028B931 /* emo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		962C61022014F3C90028B931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		962C61042014F3C90028B931 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		962C61062014F3C90028B931 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		962C61042014F3C90028B931 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		962C61092014F3C90028B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		962C610B2014F3C90028B931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		962C610E2014F3C90028B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +57,14 @@
 		962C61202014F3CA0028B931 /* emoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		962C61242014F3CA0028B931 /* EmoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoUITests.swift; sourceTree = "<group>"; };
 		962C61262014F3CA0028B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9665E7F320164F5500C2DEAC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		9665E7F7201657AF00C2DEAC /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		9665E7FD20165A3C00C2DEAC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9665E8012016613600C2DEAC /* CharacterResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResource.swift; sourceTree = "<group>"; };
+		9665E8042016624200C2DEAC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		9665E806201662C100C2DEAC /* EveAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveAPIClient.swift; sourceTree = "<group>"; };
+		9665E80C20166EC300C2DEAC /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		9665E80E20166FD500C2DEAC /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		EEB3766DE4C4E31AB446C515 /* Pods_emo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F9C1BA6EB092847993CB8A /* Pods-emo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emo/Pods-emo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,13 +137,16 @@
 		962C61012014F3C90028B931 /* emo */ = {
 			isa = PBXGroup;
 			children = (
+				9665E8032016623300C2DEAC /* utils */,
+				9665E8002016612700C2DEAC /* api */,
+				9665E7FF20165D6300C2DEAC /* model */,
 				962C61022014F3C90028B931 /* AppDelegate.swift */,
-				962C61042014F3C90028B931 /* FirstViewController.swift */,
-				962C61062014F3C90028B931 /* SecondViewController.swift */,
+				962C61042014F3C90028B931 /* DebugViewController.swift */,
 				962C61082014F3C90028B931 /* Main.storyboard */,
 				962C610B2014F3C90028B931 /* Assets.xcassets */,
 				962C610D2014F3C90028B931 /* LaunchScreen.storyboard */,
 				962C61102014F3C90028B931 /* Info.plist */,
+				9665E806201662C100C2DEAC /* EveAPIClient.swift */,
 			);
 			path = emo;
 			sourceTree = "<group>";
@@ -150,6 +167,34 @@
 				962C61262014F3CA0028B931 /* Info.plist */,
 			);
 			path = emoUITests;
+			sourceTree = "<group>";
+		};
+		9665E7FF20165D6300C2DEAC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9665E7F7201657AF00C2DEAC /* APIRequest.swift */,
+				9665E7FD20165A3C00C2DEAC /* APIError.swift */,
+				9665E7F320164F5500C2DEAC /* Character.swift */,
+				9665E80C20166EC300C2DEAC /* ErrorResponse.swift */,
+				9665E80E20166FD500C2DEAC /* DataContainer.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9665E8002016612700C2DEAC /* api */ = {
+			isa = PBXGroup;
+			children = (
+				9665E8012016613600C2DEAC /* CharacterResource.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		9665E8032016623300C2DEAC /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				9665E8042016624200C2DEAC /* Result.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,10 +367,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-emo/Pods-emo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,9 +405,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962C61072014F3C90028B931 /* SecondViewController.swift in Sources */,
+				9665E7FE20165A3C00C2DEAC /* APIError.swift in Sources */,
+				9665E8022016613600C2DEAC /* CharacterResource.swift in Sources */,
+				9665E807201662C100C2DEAC /* EveAPIClient.swift in Sources */,
 				962C61032014F3C90028B931 /* AppDelegate.swift in Sources */,
-				962C61052014F3C90028B931 /* FirstViewController.swift in Sources */,
+				962C61052014F3C90028B931 /* DebugViewController.swift in Sources */,
+				9665E80F20166FD500C2DEAC /* DataContainer.swift in Sources */,
+				9665E80D20166EC300C2DEAC /* ErrorResponse.swift in Sources */,
+				9665E7F8201657AF00C2DEAC /* APIRequest.swift in Sources */,
+				9665E8052016624200C2DEAC /* Result.swift in Sources */,
+				9665E7F420164F5500C2DEAC /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
