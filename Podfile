@@ -3,5 +3,6 @@ use_frameworks!
 
 target 'emo' do
   pod 'SwiftyJSON'
-  pod 'Result', '~> 3.0.0'
+  pod 'Result'
+  pod 'CocoaLumberjack'
 end

@@ -6,24 +6,26 @@
 //  Copyright © 2018 Jason Steele. All rights reserved.
 //
 
+import CocoaLumberjack
 import UIKit
 
 class DebugViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
+    @IBAction func onRequestButton(_: UIButton) {
         let apiClient = EveAPIClient()
 
         apiClient.send(CharacterResource(2_113_645_220)) { response in
             switch response {
             case let .success(dataContainer):
-                print("SUCCESS: Character \(dataContainer.data.name) cached "
+                DDLogInfo("SUCCESS: Character \(dataContainer.data.name) cached "
                     + "until \(String(describing: dataContainer.expires))")
             case let .failure(error):
-                print("ERROR: \(error)")
+                DDLogError("\(error)")
             }
         }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {

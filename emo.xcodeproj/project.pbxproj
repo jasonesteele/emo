@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D517FBBAAA40F43C216ECA3 /* Pods_emo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB3766DE4C4E31AB446C515 /* Pods_emo.framework */; };
+		9628B220201F8C090036F6E1 /* CustomDDLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628B21F201F8C090036F6E1 /* CustomDDLogFormatter.swift */; };
 		962C61032014F3C90028B931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61022014F3C90028B931 /* AppDelegate.swift */; };
 		962C61052014F3C90028B931 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C61042014F3C90028B931 /* DebugViewController.swift */; };
 		962C610A2014F3C90028B931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962C61082014F3C90028B931 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		80827B748A6653FABD895F2A /* Pods-emo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emo.release.xcconfig"; path = "Pods/Target Support Files/Pods-emo/Pods-emo.release.xcconfig"; sourceTree = "<group>"; };
+		9628B21F201F8C090036F6E1 /* CustomDDLogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDDLogFormatter.swift; sourceTree = "<group>"; };
 		962C60FF2014F3C90028B931 /* emo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		962C61022014F3C90028B931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		962C61042014F3C90028B931 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +148,6 @@
 				962C610B2014F3C90028B931 /* Assets.xcassets */,
 				962C610D2014F3C90028B931 /* LaunchScreen.storyboard */,
 				962C61102014F3C90028B931 /* Info.plist */,
-				9665E806201662C100C2DEAC /* EveAPIClient.swift */,
 			);
 			path = emo;
 			sourceTree = "<group>";
@@ -184,6 +185,7 @@
 		9665E8002016612700C2DEAC /* api */ = {
 			isa = PBXGroup;
 			children = (
+				9665E806201662C100C2DEAC /* EveAPIClient.swift */,
 				9665E8012016613600C2DEAC /* CharacterResource.swift */,
 			);
 			path = api;
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				9665E8042016624200C2DEAC /* Result.swift */,
+				9628B21F201F8C090036F6E1 /* CustomDDLogFormatter.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -367,11 +370,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-emo/Pods-emo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -405,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9628B220201F8C090036F6E1 /* CustomDDLogFormatter.swift in Sources */,
 				9665E7FE20165A3C00C2DEAC /* APIError.swift in Sources */,
 				9665E8022016613600C2DEAC /* CharacterResource.swift in Sources */,
 				9665E807201662C100C2DEAC /* EveAPIClient.swift in Sources */,

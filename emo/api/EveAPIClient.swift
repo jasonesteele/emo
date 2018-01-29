@@ -10,7 +10,7 @@ import Foundation
 
 public class EveAPIClient {
     private let baseEndpoint = "https://esi.tech.ccp.is/latest"
-    private let session = URLSession(configuration: .default)
+    private let session = URLSession(configuration: URLSessionConfiguration.default)
 
     public func send<T: APIRequest>(_ request: T, completion: @escaping ResultCallback<DataContainer<T.Response>>) {
         let endpoint = self.endpoint(for: request)

@@ -6,6 +6,7 @@
 //  Copyright © 2018 Jason Steele. All rights reserved.
 //
 
+import CocoaLumberjack
 import UIKit
 
 @UIApplicationMain
@@ -15,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Do any additional setup after loading the view, typically from a nib.
+
+        // Set up application logging
+        DDLog.add(DDASLLogger.sharedInstance)
+        DDASLLogger.sharedInstance.logFormatter = CustomDDLogFormatter(compact: true)
+
+        let fileLogger: DDFileLogger = DDFileLogger() // File Logger
+        fileLogger.rollingFrequency = TimeInterval(60 * 60 * 24) // 24 hours
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        fileLogger.logFormatter = CustomDDLogFormatter()
+        DDLog.add(fileLogger)
+        defaultDebugLevel = DDLogLevel.info
+
         return true
     }
 
